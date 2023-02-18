@@ -1,0 +1,43 @@
+<div class="container mt-3">
+    <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-2 pb-2 mb-3 border-bottom">
+        <h1>Sequence List</h1>
+    </div>
+
+    <div class="table-responsive">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <!-- <th scope="col">ID</th> -->
+                    <th scope="col">Number 1</th>
+                    <th scope="col">Number 2</th>
+                    <th scope="col">Number 3</th>
+                    <th scope="col">Number 4</th>
+                    <th scope="col">X</th>
+                    <th scope="col">Y</th>
+                    <th scope="col">Z</th>
+                    <th class="text-center" scope="col">Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let sequence of Sequences; let i = index">
+                    <!-- <th scope="row">{{ sequence._id }}</th> -->
+                    <td>{{ sequence.num1 }}</td>
+                    <td>{{ sequence.num2 }}</td>
+                    <td>{{ sequence.num3 }}</td>
+                    <td>{{ sequence.num4 }}</td>
+                    <td>{{ sequence.numX }}</td>
+                    <td>{{ sequence.numY }}</td>
+                    <td>{{ sequence.numZ }}</td>
+                    <td class="text-center">
+                        <button class="btn btn-sm btn-primary" routerLink="/edit-sequence/{{sequence._id}}">
+                            Edit
+                        </button>
+                        <button class="btn btn-sm btn-danger" (click)="delete(sequence._id, i)">
+                            Delete
+                        </button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

@@ -1,0 +1,28 @@
+<div class="container mt-3">
+    <h1>Create Sequence</h1>
+    <div class="row justify-content-center mt-3">
+        <div class="col-md-5">
+            <form [formGroup]="sequenceForm" (ngSubmit)="onSubmit()">
+                <div class="form-group mt-2">
+                    <label for="num1">Number 1</label>
+                    <input type="number" class="form-control" formControlName="num1" required>
+                </div>
+                <div class="form-group mt-2">
+                    <label for="num2">Number 2</label>
+                    <input type="number" class="form-control" formControlName="num2" required>
+                </div>
+                <div class="form-group mt-2">
+                    <label for="num3">Number 3</label>
+                    <input type="number" class="form-control" formControlName="num3" required>
+                </div>
+                <div class="form-group mt-2">
+                    <label for="num4">Number 4</label>
+                    <input type="number" class="form-control" formControlName="num4" required>
+                </div>
+                <div class="form-group mt-2">
+                    <button class="btn btn-success btn-block" type="submit">Create</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
